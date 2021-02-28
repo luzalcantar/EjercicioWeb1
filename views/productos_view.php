@@ -1,23 +1,30 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos</title>
-</head>
-<body>
-    Producto: <input type="text">
+<?php
+    if(isset($_REQUEST['id'])){
+        foreach ($data as $dato) {
+            $id = $dato['id_producto'];
+            $producto = $dato['producto'];
+            $precio = $dato['precio'];
+        }
+    }else{
+        $id = "";
+        $producto = "";
+        $precio = "";
+    }
+?>
+
+<?php if($id==""){ ?>
+    <form action="index.php?a=get_datos" method="post">
+<?php } ?>
+<?php if($id!=""){ ?>
+    <form action="index.php?a=get_datos&id=<?php echo $id;?>" method="post">
+<?php } ?>
+
+    <input type="text" name="in_id" value="<?php echo $id;?>">
+
+    Producto: <input type="text" name="in_producto" value="<?php echo $producto;?>">
     <br>
-    Precio: <input type="text">
+    Precio: <input type="text" name="in_precio" value="<?php echo $precio; ?>">
     <button>Guardar</button>
         <br><br>
-    <?php
-        foreach ($datos as $dato) {
-            $iva = $dato['precio']*0.16;
-            $piva = $dato['precio']*1.16;
-            echo "Producto: ".$dato["producto"]." - Precio: $".$dato["precio"]." - IVA: $".$iva." - Precio+IVA: $".$piva."<br/>";
-        }
-    ?>
-</body>
-</html>
+</form>
+    
