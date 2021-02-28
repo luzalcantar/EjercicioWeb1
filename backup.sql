@@ -2,7 +2,8 @@
 SQLyog Ultimate v9.63 
 MySQL - 5.5.5-10.1.16-MariaDB : Database - ejercicioweb1
 *********************************************************************
-*/
+*/
+
 
 /*!40101 SET NAMES utf8 */;
 
@@ -21,7 +22,7 @@ DROP TABLE IF EXISTS `productos`;
 CREATE TABLE `productos` (
   `id_producto` int(11) NOT NULL AUTO_INCREMENT,
   `producto` varchar(255) NOT NULL,
-  `precio` decimal(10,0) NOT NULL,
+  `precio` decimal(10,2) NOT NULL,
   `bandeliminar` tinyint(1) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id_producto`)
 ) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=latin1;
