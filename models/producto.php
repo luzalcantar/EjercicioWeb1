@@ -10,7 +10,7 @@ class productos_model{
         $this->data=array();
     }
     public function get_productos(){
-        $consulta=$this->db->query("select * from productos;");
+        $consulta=$this->db->query("select * from productos where bandeliminar=1;");
 
         while($filas=$consulta->fetch_assoc()){
             $this->productos[]=$filas;
@@ -33,6 +33,11 @@ class productos_model{
 
     public function actualizar($datos, $id){
         $sql="UPDATE productos SET producto='".$datos['producto']."', precio='".$datos['precio']."' WHERE id_producto=".$id.";";
+        $consulta = $this->db->query($sql);
+    }
+
+    public function eliminar($id){
+        $sql="UPDATE productos SET bandeliminar=0 WHERE id_producto=".$id.";";
         $consulta = $this->db->query($sql);
     }
 }
