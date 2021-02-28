@@ -1,0 +1,107 @@
+html, body {
+    height: -webkit-fill-available;
+}
+body {
+    padding: 25px 75px;
+    background: rgb(57,136,190);
+    background: linear-gradient(0deg, rgba(57,136,190,1) 0%, rgba(68,173,215,1) 100%);
+}
+ul.nav {
+    float: right;
+}
+.panel.panel-default {
+    background: white;
+    padding: 50px 30px;
+    border-radius: 10px;
+    margin: 35px auto;
+    width: 60%;
+    -webkit-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.36);
+    -moz-box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.36);
+    box-shadow: 3px 3px 8px 0px rgba(0,0,0,0.36);
+}
+
+a.btn.btn-default.btn-nav {
+    color: white;
+    border: 1px solid white;
+    margin: 0 10px;
+    padding: 10px 15px;
+    -webkit-box-shadow: 3px 3px 11px 0px rgba(0,0,0,0.13);
+    -moz-box-shadow: 3px 3px 11px 0px rgba(0,0,0,0.13);
+    box-shadow: 3px 3px 11px 0px rgba(0,0,0,0.13);
+}
+
+a.btn.btn-default.btn-nav:hover {
+    background: #ffffff24;
+}
+h1 {
+    text-transform: uppercase;
+    color: white;
+    font-weight: bold;
+    letter-spacing: 4px;
+    width: 50%;
+}
+
+a.btn.btn-primary.btn-edit {
+    background: #ffd14f;
+    border: #ffd14f;
+}
+button.btn.btn-primary.btnEliminar {
+    background: #ff4f4f;
+    border: #ff4f4f;
+}
+
+.panel-heading {
+    padding: 0 0 15px 0;
+}
+.nav-menu {
+    display: -webkit-box;
+}
+.float-right {
+    text-align: right;
+    width: 50%;
+}
+
+.in_div {
+    padding: 10px 0 25px;
+}
+input.btn.btn-primary.form-control.btn-save {
+    width: auto;
+    float: right;
+    padding: inherit;
+    height: auto;
+    padding: 10px 30px;
+}
+a.btn.btn-primary.btn-edit:hover{
+    background: #e4b841;
+    border: #e4b841;
+}
+button.btn.btn-primary.btnEliminar:hover {
+    background: #e44444;
+    border: #e44444;
+}
+@media (max-width: 1017px) {
+    .panel.panel-default {
+        width: 100%;
+    }
+}
+
+@media (max-width: 923px) {
+    .nav-menu {
+        display: grid;
+    }
+    .float-right {
+        width: 100%;
+    }
+    h1 {
+        width: 100%;
+    }
+    .float-right {
+        float: left !important;
+        text-align: left!important;
+    }
+}
+@media (max-width: 575px){
+    body {
+        padding: 25px 25px;
+    }
+}
