@@ -26,12 +26,16 @@ class productos_controller{
     }
     
     function get_datos(){
-        $data['id']=$_REQUEST['in_id'];
+        // $data['id']=$_REQUEST['in_id'];
         $data['producto']=$_REQUEST['in_producto'];
         $data['precio']=$_REQUEST['in_precio'];
 
         if($_REQUEST['id']==""){
             $this->modelo->agregar($data);
+        }
+        if($_REQUEST['id']!=""){
+            $date=$_REQUEST['id'];
+            $this->modelo->actualizar($data,$date);
         }
 
         header("Location:index.php");

@@ -24,7 +24,15 @@
     Producto: <input type="text" name="in_producto" value="<?php echo $producto;?>">
     <br>
     Precio: <input type="text" name="in_precio" value="<?php echo $precio; ?>">
-    <button>Guardar</button>
+
+
+
+    <?php if($id==""){ ?>
+                        <input type="submit" class="btn btn-primary form-control" name="" value="Guardar">
+                    <?php }  ?>
+                    <?php if($id!=""){ ?>
+                    <input type="submit" class="btn btn-primary form-control" name="" value="Actualizar">
+                    <?php }  ?>
         <br><br>
 </form>
     

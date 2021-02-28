@@ -30,5 +30,10 @@ class productos_model{
         $sql="INSERT INTO productos(producto, precio) VALUES ('".$datos['producto']."','".$datos['precio']."');";
         $consulta = $this->db->query($sql);
     }
+
+    public function actualizar($datos, $id){
+        $sql="UPDATE productos SET producto='".$datos['producto']."', precio='".$datos['precio']."' WHERE id_producto=".$id.";";
+        $consulta = $this->db->query($sql);
+    }
 }
 ?>
